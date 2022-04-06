@@ -56,6 +56,11 @@ def send(to, subject, content):
     response=sg.client.mail.send.post(request_body=mail.get())
     
     print(response)
+    
+#About Create
+@bp.route('/about', methods=['GET'])
+def about():
+    return render_template('mails/about.html')
         
                 
         

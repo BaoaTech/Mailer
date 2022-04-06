@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block header%}
+
+    <h1> {% block title %} About {%endblock%} </h1> 
+
+{% endblock %}
+
+{% block action %}
+
+<a href="{{url_for('mail.index')}}" class="button">Volver</a>
+
+
+{% endblock %}

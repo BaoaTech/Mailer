@@ -1,6 +1,7 @@
 body {
     font-family: 'Raleway', sans-serif;
     background-color: #f5f5f5;
+    resize:none;
 }
 
 nav {
@@ -135,3 +136,19 @@ input{
     margin: 10px;
     display: block;
 }
+
+#about{
+    
+    margin-bottom: 0;
+    margin-top: 550px;
+    background-color: white !important;
+    color: #674dd4;
+    text-decoration: underline;
+ 
+    
+}
+
+#position{
+    margin-top: 550px;
+}
+
