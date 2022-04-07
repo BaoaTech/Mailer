@@ -1,52 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=p, initial-scale=1.0">
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <title> {% block title %} {% endblock %}-Mailer </title>
 
     <nav>
-        Mail<b>er</b>
+        <a href="{{url_for('mail.index')}}" id="titulo"> Mail<b>er</b> </a> 
         <div id="position">
-
             <a class="button" id="about" href="{{url_for('mail.about')}}">About</a>
-
-
-        </div>
-
-        
+        </div>  
     </nav>
 
-<body>
-    
+    <body>  
+        <section class="content">
+            <div class="top-bar">
+                <form action="" method="get">
+                    <input type="text" name="search" placeholder="¿Quieres buscar algo?"/>
+                </form>
+                {%block action%} {% endblock %}
+            </div>
+            <header>
+                {%block header%} {% endblock %}
+            </header
+            {% for message in get_flashed_messages() %}
+                <div class="flash">{{message}}</div>
+            {% endfor %}
 
-
-    <section class="content">
-        <div class="top-bar">
-            <form action="" method="get">
-                <input type="text" name="search" placeholder="¿Quieres buscar algo?"/>
-            </form>
-            {%block action%} {% endblock %}
-        </div>
-        <header>
-            {%block header%} {% endblock %}
-        </header
-
-        {% for message in get_flashed_messages() %}
-            <div class="flash">{{message}}</div>
-        {% endfor %}
-
-        {% block content%} {% endblock %}
-    </section>
-    
-</body>
-    
-  
-   
+            {% block content%} {% endblock %}
+        </section>  
+    </body>  
 </html>

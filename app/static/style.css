@@ -4,6 +4,12 @@ body {
     resize:none;
 }
 
+p{   
+    font-family: 'Raleway', sans-serif;
+    text-align: justify;
+
+}
+
 nav {
     background-color: white;
     box-shadow: 0px 1px 2px #ddd;
@@ -139,16 +145,26 @@ input{
 
 #about{
     
-    margin-bottom: 0;
-    margin-top: 550px;
+
     background-color: white !important;
     color: #674dd4;
     text-decoration: underline;
+    padding-left: 0;
  
     
 }
 
 #position{
-    margin-top: 550px;
+    margin-top: 30px;
+    margin-left: 0px;
+    margin-right: 20px;
+    padding-left: 0px;
 }
 
+#titulo{
+    text-decoration: none;
+}
+
+#ali{
+    margin-left: 25px;
+}
